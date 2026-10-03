@@ -94,11 +94,63 @@ const Home = () => {
 
     const activeNode = HERO_BG_NODES[activeIndex] || HERO_BG_NODES[0];
 
+    const homeSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://gknexergy.com/#organization",
+                "name": "GK Nexergy",
+                "url": "https://gknexergy.com",
+                "logo": "https://gknexergy.com/images/center.png",
+                "description": "GK Nexergy provides AI solutions, enterprise digital transformation, workflow automation, and custom software development.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "IN"
+                },
+                "sameAs": [
+                    "https://www.linkedin.com/company/gknexergy",
+                    "https://twitter.com/gknexergy"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://gknexergy.com/#website",
+                "url": "https://gknexergy.com",
+                "name": "GK Nexergy",
+                "publisher": {
+                    "@id": "https://gknexergy.com/#organization"
+                }
+            },
+            {
+                "@type": "Service",
+                "name": "AI & Process Automation",
+                "provider": {
+                    "@id": "https://gknexergy.com/#organization"
+                },
+                "serviceType": "AI Automation and Machine Learning Solutions",
+                "description": "Automate repetitive workflows, unlock predictive insights, and deploy generative AI solutions tailored for enterprise scalability."
+            },
+            {
+                "@type": "Service",
+                "name": "Digital Transformation Services",
+                "provider": {
+                    "@id": "https://gknexergy.com/#organization"
+                },
+                "serviceType": "Enterprise Digital Transformation",
+                "description": "Modernize legacy systems, migrate to agile cloud infrastructure, and build high-performance digital platforms."
+            }
+        ]
+    };
+
     return (
         <>
             <SEO
-                title="GK Nexergy | Technology, Training & Digital Solutions"
-                description="GK Nexergy empowers local talent, builds technology solutions and helps businesses transform for the digital future. Train. Build. Transform."
+                title="AI Solutions, Automation & Digital Transformation | GK Nexergy"
+                description="GK Nexergy delivers enterprise AI solutions, business process automation, digital transformation, and custom software engineering to accelerate business growth."
+                keywords="AI solutions for businesses, AI automation services, digital transformation services, business automation solutions, AI consulting services, data analytics solutions, enterprise AI solutions"
+                canonical="https://gknexergy.com/home"
+                schema={homeSchema}
             />
 
             {/* HERO */}

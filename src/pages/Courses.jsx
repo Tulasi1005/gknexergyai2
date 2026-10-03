@@ -6,11 +6,32 @@ import CTABand from "../components/CTABand";
 import Reveal from "../components/Reveal";
 import { COURSES } from "../data/site";
 
+const coursesSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Professional Tech & AI Courses",
+    "url": "https://gknexergy.com/academy/courses",
+    "description": "Industry-aligned technology courses in Cybersecurity, AI tools, database engineering, and software foundations.",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": COURSES.map((c, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": c.title,
+            "url": `https://gknexergy.com/academy/${c.slug}`,
+            "description": c.description
+        }))
+    }
+};
+
 const Courses = () => (
     <>
         <SEO
-            title="Courses | Nexergy Academy"
-            description="Learn technology that moves with the industry — Cyber Security, AI Tools & Digital Marketing, Databases In-Depth and the Foundation Program."
+            title="Professional Tech Courses & AI Programs | Nexergy Academy"
+            description="Explore industry-aligned courses in Cyber Security, AI Tools, Database Engineering, and Software Foundations at Nexergy Academy."
+            keywords="AI tools course, cybersecurity training, database engineering course, technology bootcamp, IT certification programs"
+            canonical="https://gknexergy.com/academy/courses"
+            schema={coursesSchema}
         />
         <PageHero
             eyebrow="Nexergy Academy — Courses"

@@ -43,11 +43,36 @@ const sections = [
     },
 ];
 
+const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About GK Nexergy",
+    "url": "https://gknexergy.com/about",
+    "description": "GK Nexergy is an enterprise AI and digital transformation solutions company founded by industry veterans with 25+ years of IT experience.",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "GK Nexergy",
+        "url": "https://gknexergy.com",
+        "logo": "https://gknexergy.com/images/center.png",
+        "knowsAbout": [
+            "AI Solutions",
+            "Business Process Automation",
+            "Digital Transformation",
+            "Data Analytics",
+            "Cloud Platforms",
+            "Workforce Development"
+        ]
+    }
+};
+
 const About = () => (
     <>
         <SEO
-            title="About GK Nexergy | Technology & Workforce Development"
-            description="GK Nexergy is a technology, skill development and software solutions company founded by professionals with over 25 years of IT industry experience."
+            title="About Us | AI & Digital Transformation Partner | GK Nexergy"
+            description="Learn how GK Nexergy empowers enterprises through cutting-edge AI solutions, digital transformation, and business automation backed by 25+ years of IT leadership."
+            keywords="AI technology company, digital transformation company, AI solutions provider, business automation company, technology partner, enterprise IT solutions"
+            canonical="https://gknexergy.com/about"
+            schema={aboutSchema}
         />
         <PageHero
             eyebrow="About GK Nexergy"

@@ -6,11 +6,32 @@ import CTABand from "../components/CTABand";
 import Reveal from "../components/Reveal";
 import { SOLUTIONS } from "../data/site";
 
+const solutionsSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Enterprise AI & Technology Solutions",
+    "url": "https://gknexergy.com/solutions",
+    "description": "GK Nexergy delivers enterprise AI solutions, business process automation, digital transformation, and advanced analytics.",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": SOLUTIONS.map((s, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": s.title,
+            "url": `https://gknexergy.com/solutions/${s.slug}`,
+            "description": s.description
+        }))
+    }
+};
+
 const Solutions = () => (
     <>
         <SEO
-            title="Technology Solutions | GK Nexergy"
-            description="Technology solutions built around your business — software development, mobile apps, digital transformation, AI & automation, data & analytics and digital growth."
+            title="Enterprise AI & Digital Transformation Solutions | GK Nexergy"
+            description="Explore GK Nexergy's end-to-end solutions: AI automation, digital transformation, data analytics, custom software engineering, and intelligent business workflows."
+            keywords="AI solutions for businesses, AI automation services, digital transformation services, business automation solutions, data analytics solutions, custom software development, enterprise AI"
+            canonical="https://gknexergy.com/solutions"
+            schema={solutionsSchema}
         />
         <PageHero
             eyebrow="Solutions"

@@ -14,17 +14,40 @@ const CourseDetail = () => {
         (slug === "databases" && c.slug === "postgresql-mastery")
     );
     if (!course) return <Navigate to="/academy/courses" replace />;
-    const Icon = course.icon;
+    const courseSchema = {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": course.title,
+        "description": `${course.tagline} — ${course.description}`,
+        "provider": {
+            "@type": "Organization",
+            "name": "Nexergy Academy — GK Nexergy",
+            "sameAs": "https://gknexergy.com"
+        },
+        "courseCode": slug,
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "Blended",
+            "instructor": {
+                "@type": "Organization",
+                "name": "GK Nexergy Industry Mentors"
+            }
+        }
+    };
 
     return (
         <>
             <SEO
                 title={`${course.title} | Nexergy Academy`}
-                description={`${course.tagline} ${course.description}`}
+                description={`${course.tagline} — ${course.description}`}
+                keywords={`${course.title}, ${course.topics.join(", ")}, tech training, industry certification`}
+                canonical={`https://gknexergy.com/academy/${slug}`}
+                ogImage={course.image}
+                schema={courseSchema}
             />
             <PageHero
                 eyebrow={`Nexergy Academy — ${course.category}`}
-                titleLines={[course.tagline]}
+                titleLines={[course.title]}
                 description={course.description}
                 testId={`course-hero-${slug}`}
             >

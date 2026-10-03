@@ -611,11 +611,31 @@ export default function Projects() {
     });
   };
 
+  const projectsSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Enterprise Projects & Case Studies",
+    "url": "https://gknexergy.com/projects",
+    "description": "GK Nexergy delivers scalable AI platforms, healthcare software, real estate systems, and enterprise web solutions.",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": projectsData.map((p, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": p.title,
+        "description": p.description
+      }))
+    }
+  };
+
   return (
     <>
       <SEO
-        title="Projects & Case Studies | GK Nexergy"
-        description="At GK Nexergy, we transform ideas into practical technology solutions. From business websites and e-commerce platforms to AI-enabled enterprise applications, our projects focus on innovation, usability, scalability and real-world business needs."
+        title="Enterprise Projects & Case Studies | GK Nexergy"
+        description="Explore GK Nexergy's portfolio of enterprise software, AI-integrated healthcare systems, real estate platforms, and scalable digital solutions."
+        keywords="AI enterprise projects, custom software case studies, AI hospital management system, real estate tech platform, digital transformation portfolio"
+        canonical="https://gknexergy.com/projects"
+        schema={projectsSchema}
       />
       <div className="projects-page-wrapper">
         {/* Ambient Layer */}

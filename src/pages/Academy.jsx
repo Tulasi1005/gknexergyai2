@@ -15,11 +15,27 @@ const offerings = [
     { icon: Compass, title: "Career Development", text: "Support for students, graduates, professionals and career returnees." },
 ];
 
+const academySchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Nexergy Academy",
+    "url": "https://gknexergy.com/academy",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "GK Nexergy",
+        "url": "https://gknexergy.com"
+    },
+    "description": "Practical technology and AI education ecosystem designed around active industry standards with hands-on labs and direct career pathways."
+};
+
 const Academy = () => (
     <>
         <SEO
-            title="Nexergy Academy | Industry-Ready Technology Skills"
-            description="Nexergy Academy — industry-relevant learning connected to real-world technology. Beyond technology. Building human capital."
+            title="Nexergy Academy | AI & Industry-Ready Tech Skills | GK Nexergy"
+            description="Acquire industry-grade AI, software engineering, and digital skills through hands-on labs, real-world projects, and mentorship from experienced IT leaders."
+            keywords="AI skills training, enterprise software engineering courses, technology skills academy, practical coding bootcamp, IT career development"
+            canonical="https://gknexergy.com/academy"
+            schema={academySchema}
         />
         <PageHero
             eyebrow="Nexergy Academy"

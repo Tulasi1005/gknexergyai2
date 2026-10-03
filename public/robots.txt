@@ -1,0 +1,15 @@
+# GK Nexergy Robots.txt
+# https://gknexergy.com
+
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+
+# Crawl-delay for considerate crawling
+Crawl-delay: 1
+
+# Host
+Host: https://gknexergy.com
+
+# Sitemaps
+Sitemap: https://gknexergy.com/sitemap.xml

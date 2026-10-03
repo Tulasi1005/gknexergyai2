@@ -1218,7 +1218,18 @@ export const NavPagesStack = () => {
                 <button
                   type="submit"
                   disabled={!chatInput.trim()}
-                  style={{ padding: '0.65rem 1rem', borderRadius: '0.75rem', backgroundColor: '#2563EB', color: '#ffffff', border: 'none', cursor: chatInput.trim() ? 'pointer' : 'not-allowed', opacity: chatInput.trim() ? 1 : 0.5, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  style={{
+                    padding: '0.65rem 1rem',
+                    borderRadius: '0.75rem',
+                    backgroundColor: chatInput.trim() ? '#2563EB' : 'rgba(255, 255, 255, 0.08)',
+                    color: chatInput.trim() ? '#ffffff' : '#64748B',
+                    border: chatInput.trim() ? 'none' : '1px solid rgba(255, 255, 255, 0.12)',
+                    cursor: chatInput.trim() ? 'pointer' : 'not-allowed',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    transition: 'all 0.2s',
+                  }}
                 >
                   <Send style={{ width: 16, height: 16 }} />
                 </button>

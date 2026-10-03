@@ -10,6 +10,23 @@ import "./Industries.css";
 
 const icons = [Rocket, Store, GraduationCap, Briefcase, ShoppingBag, HeartPulse, Landmark, Cpu, Building2];
 
+const industriesSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Industry-Specific AI & Digital Solutions",
+    "url": "https://gknexergy.com/industries",
+    "description": "GK Nexergy delivers AI automation, data analytics, and digital transformation solutions tailored across key industry verticals.",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": INDUSTRIES.map((ind, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": ind.name,
+            "description": ind.detail
+        }))
+    }
+};
+
 const Industries = () => {
     const [activeCard, setActiveCard] = useState(null);
 
@@ -20,8 +37,11 @@ const Industries = () => {
     return (
         <>
             <SEO
-                title="Industries We Serve | GK Nexergy"
-                description="Technology that understands your industry — from startups and SMBs to education, healthcare, finance and beyond."
+                title="Industry-Specific AI & Digital Solutions | GK Nexergy"
+                description="Tailored AI solutions, business process automation, and digital transformation for healthcare, finance, retail, education, and enterprises."
+                keywords="AI solutions for healthcare, AI solutions for finance, AI solutions for education, AI solutions for retail, industry digital transformation, enterprise automation"
+                canonical="https://gknexergy.com/industries"
+                schema={industriesSchema}
             />
             <PageHero
                 eyebrow="Industries"

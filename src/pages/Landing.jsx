@@ -7,8 +7,10 @@ const Landing = () => {
   return (
     <>
       <SEO
-        title="GK Nexergy | Your IT Innovation Journey"
-        description="Your IT Innovation Journey. Designed in Blueprint. TRAIN • BUILD • TRANSFORM. Discover the Vision."
+        title="GK Nexergy | AI Solutions, Digital Transformation & Innovation"
+        description="Your enterprise IT innovation journey. GK Nexergy brings AI solutions, intelligent process automation, and workforce readiness into one connected ecosystem."
+        keywords="AI solutions for businesses, digital transformation services, enterprise automation, IT innovation, GK Nexergy"
+        canonical="https://gknexergy.com"
       />
 
       {/* Interactive Custom Cosmic Cursor */}

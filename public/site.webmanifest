@@ -1,0 +1,21 @@
+{
+  "name": "GK Nexergy | AI Solutions, Automation & Digital Transformation",
+  "short_name": "GK Nexergy",
+  "description": "Enterprise AI solutions, intelligent automation, digital transformation, and industry-ready technology training.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1120",
+  "theme_color": "#0B1120",
+  "icons": [
+    {
+      "src": "/images/center.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/center.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -11,17 +11,44 @@ const SolutionDetail = () => {
     const { slug } = useParams();
     const solution = SOLUTIONS.find((s) => s.slug === slug);
     if (!solution) return <Navigate to="/solutions" replace />;
-    const Icon = solution.icon;
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": solution.title,
+        "serviceType": solution.tagline,
+        "description": solution.description,
+        "provider": {
+            "@type": "Organization",
+            "name": "GK Nexergy",
+            "url": "https://gknexergy.com"
+        },
+        "areaServed": "Global",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": `${solution.title} Capabilities`,
+            "itemListElement": solution.features.map((feat) => ({
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": feat
+                }
+            }))
+        }
+    };
 
     return (
         <>
             <SEO
-                title={`${solution.title} | GK Nexergy Solutions`}
-                description={`${solution.tagline} ${solution.description}`}
+                title={`${solution.title} | GK Nexergy`}
+                description={`${solution.tagline} — ${solution.description}`}
+                keywords={`${solution.title}, ${solution.features.join(", ")}, enterprise technology, business solutions`}
+                canonical={`https://gknexergy.com/solutions/${slug}`}
+                ogImage={solution.image}
+                schema={serviceSchema}
             />
             <PageHero
                 eyebrow="GK Nexergy Solutions"
-                titleLines={[solution.tagline]}
+                titleLines={[solution.title]}
                 description={solution.description}
                 testId={`solution-hero-${slug}`}
             >

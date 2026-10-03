@@ -18,8 +18,10 @@ const reasons = [
 const Why = () => (
     <>
         <SEO
-            title="Why GK Nexergy | Experience, Relevance & Real Outcomes"
-            description="Why GK Nexergy — because technology is only valuable when it creates meaningful outcomes."
+            title="Why Choose GK Nexergy | 25+ Years IT & AI Solutions Experience"
+            description="Discover why businesses partner with GK Nexergy for enterprise AI automation, digital transformation, and scalable software engineered for real business outcomes."
+            keywords="why choose GK Nexergy, enterprise AI partner, digital transformation company, business automation solutions, trusted technology partner"
+            canonical="https://gknexergy.com/why-gk-nexergy"
         />
         <PageHero
             eyebrow="Why GK Nexergy"

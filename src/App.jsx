@@ -18,6 +18,7 @@ import CourseDetail from "@/pages/CourseDetail";
 import Projects from "@/pages/Projects";
 import Careers from "@/pages/Careers";
 import Contact from "@/pages/Contact";
+import NotFound from "@/pages/NotFound";
 
 import Landing from "@/pages/Landing";
 
@@ -81,7 +82,7 @@ const Shell = ({ theme, onToggleTheme }) => {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="*" element={<Home />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </main>
             {!isLanding && <Footer />}

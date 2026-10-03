@@ -136,11 +136,38 @@ const Careers = () => {
     });
   };
 
+  const careersSchema = {
+    "@context": "https://schema.org",
+    "@graph": OPEN_ROLES.map((role) => ({
+      "@type": "JobPosting",
+      "title": role.title,
+      "description": role.description,
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "GK Nexergy",
+        "sameAs": "https://gknexergy.com",
+        "logo": "https://gknexergy.com/images/center.png"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        }
+      },
+      "skills": role.skills.join(", ")
+    }))
+  };
+
   return (
     <div className="careers-page-wrapper">
       <SEO
-        title="Careers & Current Openings | GK Nexergy"
-        description="Explore open career opportunities at GK Nexergy across Software Engineering, Testing, Training, Tele Calling, Administration, and Digital Marketing."
+        title="Careers & Job Openings | AI & Technology | GK Nexergy"
+        description="Join GK Nexergy. Explore current job openings in software engineering, QA testing, technical training, digital marketing, administration, and outreach."
+        keywords="careers at GK Nexergy, AI jobs, software engineering careers, QA tester jobs, tech trainer careers, digital marketing jobs"
+        canonical="https://gknexergy.com/careers"
+        schema={careersSchema}
       />
 
       {/* 1. NextGen Forge Style Page Hero */}

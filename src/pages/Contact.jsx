@@ -48,11 +48,35 @@ const Contact = () => {
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact GK Nexergy",
+    "url": "https://gknexergy.com/contact",
+    "description": "Get in touch with GK Nexergy for enterprise AI solutions, digital transformation, and tech skills education.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "GK Nexergy",
+      "url": "https://gknexergy.com",
+      "telephone": "+91-9704585960",
+      "email": "contact@gknexergy.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9704585960",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Telugu", "Hindi"]
+      }
+    }
+  };
+
   return (
     <div className="contact-page">
       <SEO
-        title="Contact | GK Nexergy"
-        description="Get in touch with GK Nexergy. Call, WhatsApp, or email us for courses, partnerships, career guidance, and business solutions."
+        title="Contact Us | AI & Digital Solutions Consultation | GK Nexergy"
+        description="Connect with GK Nexergy specialists. Request a consultation for enterprise AI solutions, digital transformation, academy programs, or business inquiries."
+        keywords="contact GK Nexergy, AI solutions consultation, digital transformation inquiry, software consulting, enterprise technology partner"
+        canonical="https://gknexergy.com/contact"
+        schema={contactSchema}
       />
 
       {/* Hero */}

@@ -1,0 +1,6 @@
+[
+  {
+    "href": "inline-0",
+    "rulesText": "body { margin: 0px; padding: 0px; overflow: hidden; height: 100vh; }\niframe { width: 100%; height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; }\n"
+  }
+]

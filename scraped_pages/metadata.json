@@ -1,0 +1,182 @@
+{
+  "routes": {
+    "/": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/",
+      "pathname": "/",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/about": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/about",
+      "pathname": "/about",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/vision": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/vision",
+      "pathname": "/vision",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/why-gk-nexergy": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/why-gk-nexergy",
+      "pathname": "/why-gk-nexergy",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/industries": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/industries",
+      "pathname": "/industries",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/projects": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/projects",
+      "pathname": "/projects",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/careers": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/careers",
+      "pathname": "/careers",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/contact": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/contact",
+      "pathname": "/contact",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/academy": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/academy",
+      "pathname": "/academy",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/academy/courses": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/academy/courses",
+      "pathname": "/academy/courses",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/academy/foundation-program": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/academy/foundation-program",
+      "pathname": "/academy/foundation-program",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/academy/cyber-security": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/academy/cyber-security",
+      "pathname": "/academy/cyber-security",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/academy/ai-digital-marketing": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/academy/ai-digital-marketing",
+      "pathname": "/academy/ai-digital-marketing",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/academy/databases": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/academy/databases",
+      "pathname": "/academy/databases",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/solutions/software-development": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/solutions/software-development",
+      "pathname": "/solutions/software-development",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/solutions/mobile-development": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/solutions/mobile-development",
+      "pathname": "/solutions/mobile-development",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/solutions/digital-transformation": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/solutions/digital-transformation",
+      "pathname": "/solutions/digital-transformation",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/solutions/ai-automation": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/solutions/ai-automation",
+      "pathname": "/solutions/ai-automation",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/solutions/data-analytics": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/solutions/data-analytics",
+      "pathname": "/solutions/data-analytics",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    },
+    "/solutions/digital-growth": {
+      "url": "https://nexergy-solutions.preview.emergentagent.com/solutions/digital-growth",
+      "pathname": "/solutions/digital-growth",
+      "title": "Loading...",
+      "metaDesc": "",
+      "fonts": [],
+      "elementsSummary": []
+    }
+  },
+  "globalStyles": {
+    "bodyFontFamily": "\"Times New Roman\"",
+    "bodyColor": "rgb(0, 0, 0)",
+    "bodyBg": "rgba(0, 0, 0, 0)",
+    "customProps": {
+      "margin-top": "0px",
+      "margin-right": "0px",
+      "margin-bottom": "0px",
+      "margin-left": "0px",
+      "padding-top": "0px",
+      "padding-right": "0px",
+      "padding-bottom": "0px",
+      "padding-left": "0px",
+      "overflow-x": "hidden",
+      "overflow-y": "hidden",
+      "height": "100vh"
+    }
+  }
+}

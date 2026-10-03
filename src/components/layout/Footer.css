@@ -1,0 +1,413 @@
+/* ==========================================================================
+   GK Nexergy - Modern Responsive Footer Design System
+   ========================================================================== */
+
+.site-footer {
+  width: 100%;
+  border-top: 1px solid var(--footer-border);
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light Theme Variables */
+:root {
+  --footer-bg: #f8fafc;
+  --footer-border: #e2e8f0;
+  --footer-title: #0f172a;
+  --footer-text: #475569;
+  --footer-muted: #64748b;
+  --footer-card: #ffffff;
+  --footer-accent: #2563eb;
+  --footer-accent-glow: rgba(37, 99, 235, 0.15);
+}
+
+/* Dark Theme Variables */
+.dark .site-footer,
+.dark {
+  --footer-bg: #060d1a;
+  --footer-border: rgba(56, 189, 248, 0.15);
+  --footer-title: #ffffff;
+  --footer-text: #cbd5e1;
+  --footer-muted: #94a3b8;
+  --footer-card: #0c1e3d;
+  --footer-accent: #38bdf8;
+  --footer-accent-glow: rgba(56, 189, 248, 0.25);
+}
+
+/* â”€â”€ Container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 20px 24px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .footer-container {
+    padding: 60px 32px 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    padding: 72px 40px 32px;
+  }
+}
+
+/* â”€â”€ 3-Column Responsive Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+@media (min-width: 640px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+}
+
+/* â”€â”€ Column 1: Brand & Identity â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.footer-logo-img {
+  height: 42px;
+  width: auto;
+  max-height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.25s ease;
+}
+
+@media (min-width: 640px) {
+  .footer-logo-img {
+    height: 46px;
+    max-height: 52px;
+  }
+}
+
+.footer-logo-link:hover .footer-logo-img {
+  transform: scale(1.02);
+}
+
+.dark .footer-logo-img {
+  filter: drop-shadow(0 2px 10px rgba(56, 189, 248, 0.35));
+}
+
+/* â”€â”€ Elegant Straight Tagline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer-tagline-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.footer-tagline-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16.5px;          /* increased for elegance */
+  font-weight: 650;
+  color: var(--footer-title);
+  letter-spacing: -0.3px;
+  line-height: 1.35;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-tagline-item:hover {
+  transform: translateX(4px);
+  color: var(--footer-accent);
+}
+
+.tagline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: rgba(37, 99, 235, 0.09);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  color: var(--footer-accent);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.footer-tagline-item:hover .tagline-icon {
+  background: var(--footer-accent);
+  color: #ffffff;
+  box-shadow: 0 4px 12px var(--footer-accent-glow);
+}
+
+.dark .tagline-icon {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+}
+
+.dark .footer-tagline-item:hover .tagline-icon {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .footer-tagline-item {
+    font-size: 15.5px;
+  }
+  .tagline-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.footer-bio {
+  font-size: 13.5px;
+  color: var(--footer-text);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 380px;
+}
+
+/* â”€â”€ Column 2: Contact Info â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer-contact-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-col-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--footer-title);
+  margin: 0 0 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-col-heading::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--footer-accent);
+  border-radius: 2px;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13.5px;
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+.footer-contact-item:hover {
+  color: var(--footer-accent);
+  transform: translateX(2px);
+}
+
+.footer-contact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  color: var(--footer-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.footer-contact-item:hover .footer-contact-icon {
+  background: var(--footer-accent);
+  color: #ffffff;
+  box-shadow: 0 0 12px var(--footer-accent-glow);
+}
+
+/* â”€â”€ Column 3: Social & Community â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer-social-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-social-subtext {
+  font-size: 13px;
+  color: var(--footer-text);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+  max-width: 320px;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.footer-social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--footer-card);
+  border: 1px solid var(--footer-border);
+  color: var(--footer-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.footer-social-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--footer-accent);
+  color: var(--footer-accent);
+  box-shadow: 0 6px 16px var(--footer-accent-glow);
+}
+
+.dark .footer-social-btn {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark .footer-social-btn:hover {
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+}
+
+.footer-launch-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--footer-muted);
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid var(--footer-border);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.footer-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+/* â”€â”€ Bottom Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer-bottom-bar {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--footer-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .footer-bottom-bar {
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.footer-copyright {
+  font-size: 12.5px;
+  color: #111827;
+  margin: 0;
+}
+
+.dark .footer-copyright {
+  color: var(--footer-muted);
+}
+
+.footer-legal-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-legal-link {
+  font-size: 12.5px;
+  color: var(--footer-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-link:hover {
+  color: var(--footer-accent);
+}
+
+/* â”€â”€ Extreme Screen Adaptations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 36px 16px 20px;
+  }
+  .footer-grid {
+    gap: 28px;
+  }
+  .footer-logo-img {
+    height: 38px;
+  }
+  .footer-bottom-bar {
+    margin-top: 32px;
+    padding-top: 20px;
+  }
+}
